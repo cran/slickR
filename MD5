@@ -1,9 +1,9 @@
-0812af59d9cb0f73c81d6451a38cd1c7 *DESCRIPTION
+2e1a618030d8faa1eb9dcd574f24af39 *DESCRIPTION
 df49685f46d6bb8441e2aa067885ee23 *NAMESPACE
 7855724249d94be629b7993c07b7001c *R/getHelp.R
 fb59cb377bd0941f8827b4566ac79a4e *R/readImage.R
-854186c7c617a2fefdfa05f6498c34e7 *R/slickR.R
-de89221a9dde7458b7fb3da59acc9b18 *README.md
+8aab22e76d0737415770736e794910be *R/slickR.R
+eb6a8479bff81c76a48e690937cab396 *README.md
 b2d4316164f47c0c1064e7e83dd72167 *inst/htmlwidgets/lib/jquery-migrate/jquery-migrate.min.js
 e071abda8fe61194711cfc2ab99fe104 *inst/htmlwidgets/lib/jquery/jquery.min.js
 6246e12e3d4c26809621f6b4bd986fed *inst/htmlwidgets/lib/slick-1.6.0/CONTRIBUTING.markdown
@@ -22,7 +22,7 @@ ced611daf7709cc778da928fec876475 *inst/htmlwidgets/lib/slick-1.6.0/slick/fonts/s
 f97e3bbf73254b0112091d0192f17aec *inst/htmlwidgets/lib/slick-1.6.0/slick/fonts/slick.svg
 d41f55a78e6f49a5512878df1737e58a *inst/htmlwidgets/lib/slick-1.6.0/slick/fonts/slick.ttf
 b7c9e1e479de3b53f1e4e30ebac2403a *inst/htmlwidgets/lib/slick-1.6.0/slick/fonts/slick.woff
-34af21423ba759887b876d2e9730c4ac *inst/htmlwidgets/lib/slick-1.6.0/slick/slick-theme.css
+1b6dc5aed2d44dcd09613973a87db528 *inst/htmlwidgets/lib/slick-1.6.0/slick/slick-theme.css
 137003a2496050671b111c611066feac *inst/htmlwidgets/lib/slick-1.6.0/slick/slick-theme.less
 e97dc549d5450ebd34fe128eefc69cd6 *inst/htmlwidgets/lib/slick-1.6.0/slick/slick-theme.scss
 13b1b6672b8cfb0d9ae7f899f1c42875 *inst/htmlwidgets/lib/slick-1.6.0/slick/slick.css
@@ -30,9 +30,9 @@ e97dc549d5450ebd34fe128eefc69cd6 *inst/htmlwidgets/lib/slick-1.6.0/slick/slick-t
 c05bd4f5125c92d0666318181ecf43cb *inst/htmlwidgets/lib/slick-1.6.0/slick/slick.less
 b53bdfc29e18f4d493d775a8023fbdc8 *inst/htmlwidgets/lib/slick-1.6.0/slick/slick.min.js
 c05bd4f5125c92d0666318181ecf43cb *inst/htmlwidgets/lib/slick-1.6.0/slick/slick.scss
-adf2bb4829a85ccf2cb2a083950f3de4 *inst/htmlwidgets/lib/slickR/slickR.css
-926cc0dec9a46ddaa1eac7572f7842db *inst/htmlwidgets/slickR.js
+0f675415c47c0b06c557e5dda76685ce *inst/htmlwidgets/lib/slickR/slickR.css
+c8866cf1a706b7d607057aa040a4b675 *inst/htmlwidgets/slickR.js
 80d72cb32cf28b28ffa8bc3d83e9e7e3 *inst/htmlwidgets/slickR.yaml
 5be9c699dcdcd56d0daa2d41f4480842 *man/getHelp.Rd
 d0d3574775e7683e35c35c1525b0b40f *man/slickR-shiny.Rd
-21aceff9350fd73dac5fb252f3ba9520 *man/slickR.Rd
+0e494a897d3e20979edb8a3082a41eed *man/slickR.Rd

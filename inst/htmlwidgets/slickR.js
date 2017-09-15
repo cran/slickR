@@ -21,6 +21,10 @@ HTMLWidgets.widget({
                 var divEl = document.createElement("div");
                 var newEl = document.createElement(objType);
                 newEl.style.height=height;
+
+                newEl.style.marginLeft='auto';
+                newEl.style.marginRight='auto';
+                
                 divEl.appendChild(newEl);
                 
                 switch (objType) {
@@ -35,7 +39,7 @@ HTMLWidgets.widget({
                 }
                 
                 newEl.style.width=width;
-                
+
                 mainDiv.appendChild(divEl);
               }
               return mainDiv;
@@ -45,7 +49,7 @@ HTMLWidgets.widget({
                for(j=0;j<x.length;j++){
                   if(x[j].dotObj) var dotObj=x[j].dotObj;
                   $("."+x[j].divName).detach();
-                  buildDiv(x[j].obj,x[j].divType,x[j].divName,75/x.length+'%',height+'px');
+                  buildDiv(x[j].obj,x[j].divType,x[j].divName,x[j].padding,height+'px');
                   
                   $("."+x[j].divName).slick(x[j].slickOpts);
                 }
