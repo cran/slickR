@@ -1,9 +1,9 @@
-2e1a618030d8faa1eb9dcd574f24af39 *DESCRIPTION
+35438f1063e87b9cbc506a78f8c457bd *DESCRIPTION
 df49685f46d6bb8441e2aa067885ee23 *NAMESPACE
 7855724249d94be629b7993c07b7001c *R/getHelp.R
 fb59cb377bd0941f8827b4566ac79a4e *R/readImage.R
-8aab22e76d0737415770736e794910be *R/slickR.R
-eb6a8479bff81c76a48e690937cab396 *README.md
+d5030af9fa39200ab94cc307f33d420b *R/slickR.R
+1975c6984eec33a3cf1f06b9383be600 *README.md
 b2d4316164f47c0c1064e7e83dd72167 *inst/htmlwidgets/lib/jquery-migrate/jquery-migrate.min.js
 e071abda8fe61194711cfc2ab99fe104 *inst/htmlwidgets/lib/jquery/jquery.min.js
 6246e12e3d4c26809621f6b4bd986fed *inst/htmlwidgets/lib/slick-1.6.0/CONTRIBUTING.markdown
@@ -31,7 +31,7 @@ c05bd4f5125c92d0666318181ecf43cb *inst/htmlwidgets/lib/slick-1.6.0/slick/slick.l
 b53bdfc29e18f4d493d775a8023fbdc8 *inst/htmlwidgets/lib/slick-1.6.0/slick/slick.min.js
 c05bd4f5125c92d0666318181ecf43cb *inst/htmlwidgets/lib/slick-1.6.0/slick/slick.scss
 0f675415c47c0b06c557e5dda76685ce *inst/htmlwidgets/lib/slickR/slickR.css
-c8866cf1a706b7d607057aa040a4b675 *inst/htmlwidgets/slickR.js
+52806467ffb52801c5e444ec675bdef8 *inst/htmlwidgets/slickR.js
 80d72cb32cf28b28ffa8bc3d83e9e7e3 *inst/htmlwidgets/slickR.yaml
 5be9c699dcdcd56d0daa2d41f4480842 *man/getHelp.Rd
 d0d3574775e7683e35c35c1525b0b40f *man/slickR-shiny.Rd
