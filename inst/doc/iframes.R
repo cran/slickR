@@ -34,23 +34,19 @@ get_help <- function(fn,pkg){
 
 ## ------------------------------------------------------------------------
 
-help_files <- unlist(lapply(
+help_files <- lapply(
     ls("package:stats",pattern = '^r')[-1],
     get_help,
     pkg = 'stats')
-  )
 
 
 ## ------------------------------------------------------------------------
-opts <- list(
-  dots           = TRUE,
-  slidesToShow   = 2,
-  slidesToScroll = 2
-)
 
 slickR::slickR(help_files,
                slideType = 'iframe',
-               slickOpts = opts,
-               height = '400px',
-               width='100%')
+               height = 400,
+               width='95%') + 
+  settings(dots  = TRUE, 
+           slidesToShow   = 2, 
+           slidesToScroll = 2)
 

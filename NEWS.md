@@ -1,3 +1,23 @@
+# slick 0.4.9
+
+* Add slick_div S3 method to build DOM elements to pass into slickR
+* Add advanced vignette to work with DOM elements
+* Remove dependency on magick and retain pdftools as Suggests
+
+# slickR 0.4.8
+
+* Change the slickR.js script to support htmlwidgets in iframe src
+
+# slickR 0.4.6
+
+* Add new settings functions to control the settings of a slick object
+* Add new methods to stack and synch slick objects
+* Deprecate slickOpts and synchSlides arguments in slickR
+* Deprecate getHelp function
+* Update underlying js libraries to current builds
+* Update vignettes to the new functions and methods
+* Refactor pkgdown site for documentation
+
 # slickR 0.4.4
 
 * Fix bug in htmlwidget to handle empty object links

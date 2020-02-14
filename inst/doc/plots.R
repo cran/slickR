@@ -15,18 +15,14 @@ library(slickR)
 #      plot(1:10)
 #    }, standalone = TRUE)
 #  
-#  # ggplot
-#    xmlSVG({
-#      show(ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, colour = Species)) +
-#        geom_point())
-#    }, standalone = TRUE)
+#  #library(lattice)
 #  
-#  # lattice xyplot
+#  # xyplot
 #    xmlSVG({
 #      print(xyplot(x ~ x, data.frame(x = 1:10), type = "l"))
 #    }, standalone = TRUE)
 #  
-#  # lattice dotplot
+#  # dotplot
 #    xmlSVG({
 #      print(dotplot(variety ~ yield | site,
 #        data = barley, groups = year,
@@ -36,55 +32,38 @@ library(slickR)
 #      ))
 #    }, standalone = TRUE)
 #  
+#  #library(ggplot2)
+#  
+#    xmlSVG({
+#      show(ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, colour = Species)) +
+#        geom_point())
+#    }, standalone = TRUE)
+#  
 
 ## ------------------------------------------------------------------------
-plotsToSVG <- lapply(1:5,
-                     function(x){
+plotsToSVG <- replicate(5,{
                        svglite::xmlSVG(
-                         code = {plot(stats::density(stats::rnorm(10*x,sd=x)))},
+                         code = {
+                           x <- sample(1:5,1)
+                           plot(stats::density(stats::rnorm(10*x,sd=x)))
+                           },
                          standalone = TRUE)
-                       }
+                       },
+                      simplify = FALSE
                      )
 
 ## ------------------------------------------------------------------------
-SVGtoChr <- sapply(plotsToSVG, function(sv) {
-  paste0("data:image/svg+xml;utf8,", as.character(sv))
-})
+slickR::slickR(plotsToSVG, height = 200, width = "95%")
 
 ## ------------------------------------------------------------------------
 
-SVGtoChr <- gsub("#", "%23", SVGtoChr)
+slick_up <- slickR(plotsToSVG, height = 200, width = "95%") + 
+  settings(slidesToShow = 1, slidesToScroll = 1)
 
+slick_down <- slickR(plotsToSVG, height = 100, width = "95%") + 
+  settings(slidesToScroll = 1,  slidesToShow = 3, 
+     centerMode = TRUE, focusOnSelect = TRUE)
 
-## ------------------------------------------------------------------------
-slickR(SVGtoChr, 
-       slideId = 'ex8',
-       height = 200, 
-       width = "95%"
-      )
-
-## ------------------------------------------------------------------------
-
-opts <- list(
-  # 'up' options
-    list(slidesToShow = 1, slidesToScroll = 1),
-  # 'down' options
-    list(dots = FALSE, 
-         slidesToScroll = 1, 
-         slidesToShow = 3,
-         centerMode = TRUE, 
-         focusOnSelect = TRUE)
-)
-
-synch_map <- expand.grid(list('up','down'),stringsAsFactors = FALSE)
-
-slickR(SVGtoChr,
-       slideIdx = replicate(2,seq_along(SVGtoChr),simplify = FALSE),
-       slideId =  c('up','down'),
-       synchSlides = synch_map,
-       slideType = rep('img',length(SVGtoChr)),
-       slickOpts = opts,
-       height = 100, 
-       width = "95%")
+slick_up %synch% slick_down
 
 
