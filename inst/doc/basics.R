@@ -1,31 +1,31 @@
-## ----setup, include = FALSE----------------------------------------------
+## ----setup, include = FALSE---------------------------------------------------
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
 
-## ------------------------------------------------------------------------
+## -----------------------------------------------------------------------------
 library(htmlwidgets)
 library(slickR)
 
-## ------------------------------------------------------------------------
+## -----------------------------------------------------------------------------
 
 slickR(obj = nba_player_logo$uri,height = 100, width = "95%")
 
 
-## ------------------------------------------------------------------------
+## -----------------------------------------------------------------------------
 
 slickR(obj = nba_player_logo$uri,height = 100, width = "95%") + 
   settings(dots = TRUE)
 
 
-## ------------------------------------------------------------------------
+## -----------------------------------------------------------------------------
 
 slickR(obj = nba_player_logo$uri,height = 100, width = "95%") + 
   settings(dots = TRUE, autoplay = TRUE)
 
 
-## ------------------------------------------------------------------------
+## -----------------------------------------------------------------------------
 
 opts <- settings(
   dots = TRUE,
@@ -38,7 +38,7 @@ slickR(obj = nba_player_logo$uri,height = 100, width = "95%") +
   opts
 
 
-## ------------------------------------------------------------------------
+## -----------------------------------------------------------------------------
 
 slick_link <- slickR(obj = nba_player_logo$uri,
                 objLinks = nba_player_logo$player_home,
@@ -46,7 +46,7 @@ slick_link <- slickR(obj = nba_player_logo$uri,
 
 slick_link + opts
 
-## ------------------------------------------------------------------------
+## -----------------------------------------------------------------------------
 
 cP1 <- htmlwidgets::JS("function(slick,index) {
                             return '<a>'+(index+1)+'</a>';
@@ -70,7 +70,7 @@ slick_dots <- slickR(
 slick_dots + opts_dot_number
 
 
-## ------------------------------------------------------------------------
+## -----------------------------------------------------------------------------
 
 cP2 <- JS("function(slick,index) {
           return '<a><img src= ' + dotObj[index] + '  width=100% height=100%></a>';
@@ -99,7 +99,7 @@ slick_dots_logo <- slickR(
 
 htmltools::browsable(htmltools::tagList(s2, slick_dots_logo))
 
-## ------------------------------------------------------------------------
+## -----------------------------------------------------------------------------
 
 slick_up_stack <- slickR(obj = nba_player_logo$uri, height = 100, width = "95%")
 
@@ -108,7 +108,7 @@ slick_down_stack <- slickR(obj = nba_player_logo$uri, height = 100, width = "95%
 slick_up_stack %stack% slick_down_stack
 
 
-## ------------------------------------------------------------------------
+## -----------------------------------------------------------------------------
 slick_up_synch <- slickR(obj = nba_player_logo$uri, height = 100, width = "95%")
 
 slick_down_synch <- slickR(obj = nba_player_logo$uri, height = 100, width = "95%")
@@ -116,7 +116,7 @@ slick_down_synch <- slickR(obj = nba_player_logo$uri, height = 100, width = "95%
 slick_up_synch %synch% slick_down_synch
 
 
-## ------------------------------------------------------------------------
+## -----------------------------------------------------------------------------
 
 slickR(obj = nba_player_logo$uri[1:2], height = 100, width = "95%") %synch%
 ( slickR(nba_player_logo$name[1:2], slideType = 'p') + settings(arrows = FALSE) )

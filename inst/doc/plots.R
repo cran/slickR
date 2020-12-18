@@ -1,14 +1,15 @@
-## ---- include = FALSE----------------------------------------------------
+## ---- include = FALSE---------------------------------------------------------
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>"
+  comment = "#>",
+  eval = interactive()
 )
 
-## ----setup---------------------------------------------------------------
-library(svglite)
-library(slickR)
+## ----setup--------------------------------------------------------------------
+#  library(svglite)
+#  library(slickR)
 
-## ----eval=FALSE----------------------------------------------------------
+## -----------------------------------------------------------------------------
 #  
 #  # Standard Plot
 #    xmlSVG({
@@ -40,30 +41,30 @@ library(slickR)
 #    }, standalone = TRUE)
 #  
 
-## ------------------------------------------------------------------------
-plotsToSVG <- replicate(5,{
-                       svglite::xmlSVG(
-                         code = {
-                           x <- sample(1:5,1)
-                           plot(stats::density(stats::rnorm(10*x,sd=x)))
-                           },
-                         standalone = TRUE)
-                       },
-                      simplify = FALSE
-                     )
+## -----------------------------------------------------------------------------
+#  plotsToSVG <- replicate(5,{
+#                         svglite::xmlSVG(
+#                           code = {
+#                             x <- sample(1:5,1)
+#                             plot(stats::density(stats::rnorm(10*x,sd=x)))
+#                             },
+#                           standalone = TRUE)
+#                         },
+#                        simplify = FALSE
+#                       )
 
-## ------------------------------------------------------------------------
-slickR::slickR(plotsToSVG, height = 200, width = "95%")
+## -----------------------------------------------------------------------------
+#  slickR::slickR(plotsToSVG, height = 200, width = "95%")
 
-## ------------------------------------------------------------------------
-
-slick_up <- slickR(plotsToSVG, height = 200, width = "95%") + 
-  settings(slidesToShow = 1, slidesToScroll = 1)
-
-slick_down <- slickR(plotsToSVG, height = 100, width = "95%") + 
-  settings(slidesToScroll = 1,  slidesToShow = 3, 
-     centerMode = TRUE, focusOnSelect = TRUE)
-
-slick_up %synch% slick_down
-
+## -----------------------------------------------------------------------------
+#  
+#  slick_up <- slickR(plotsToSVG, height = 200, width = "95%") +
+#    settings(slidesToShow = 1, slidesToScroll = 1)
+#  
+#  slick_down <- slickR(plotsToSVG, height = 100, width = "95%") +
+#    settings(slidesToScroll = 1,  slidesToShow = 3,
+#       centerMode = TRUE, focusOnSelect = TRUE)
+#  
+#  slick_up %synch% slick_down
+#  
 
