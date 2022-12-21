@@ -1,12 +1,10 @@
 <!-- badges: start -->
 [![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/slickR)](https://cran.r-project.org/package=slickR)
 [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](https://www.repostatus.org/) 
-[![downloads](https://cranlogs.r-pkg.org:443/badges/slickR)](https://cranlogs.r-pkg.org:443/badges/slickR)
-[![R-win build status](https://github.com/yonicd/slickR/workflows/R-win/badge.svg)](https://github.com/yonicd/slickR)
-[![R-mac build status](https://github.com/yonicd/slickR/workflows/R-mac/badge.svg)](https://github.com/yonicd/slickR)
-[![R-linux build status](https://github.com/yonicd/slickR/workflows/R-linux/badge.svg)](https://github.com/yonicd/slickR)
-[![Codecov test coverage](https://codecov.io/gh/yonicd/slickR/branch/master/graph/badge.svg)](https://codecov.io/gh/yonicd/slickR?branch=master)
-[![Covrpage Summary](https://img.shields.io/badge/covrpage-Last_Build_2020_12_12-brightgreen.svg)](http://tinyurl.com/tbqmb47)
+[![downloads](https://cranlogs.r-pkg.org/badges/slickR)](https://cranlogs.r-pkg.org/badges/slickR)
+[![R-win build status](https://github.com/yonicd/slickR/workflows/R-check/badge.svg)](https://github.com/yonicd/slickR)
+[![Codecov test coverage](https://codecov.io/gh/yonicd/slickR/branch/master/graph/badge.svg)](https://app.codecov.io/gh/yonicd/slickR?branch=master)
+[![Covrpage Summary](https://img.shields.io/badge/covrpage-Last_Build_2022_12_19-brightgreen.svg)](http://tinyurl.com/tbqmb47)
 <!-- badges: end -->
 
 # slickR <img src="https://github.com/yonicd/slickR/raw/master/man/figures/logo.png" align="right"  class="logo"/>
@@ -31,3 +29,11 @@ install.packages('slickR')
 ```r
 remotes::install_github('yonicd/slickR')
 ```
+
+### Getting started
+- [slickR Basics](https://cran.r-project.org/package=slickR/vignettes/basics.html)
+- [slickR with DOMs](https://cran.r-project.org/package=slickR/vignettes/doms.html)
+- [slickR with Iframes](https://cran.r-project.org/package=slickR/vignettes/iframes.html)
+- [slickR with PDFs](https://cran.r-project.org/package=slickR/vignettes/pdfs.html)
+- [slickR with Plots](https://cran.r-project.org/package=slickR/vignettes/plots.html)
+- [slickR with Shiny](https://cran.r-project.org/package=slickR/vignettes/shiny.html)

@@ -1,3 +1,8 @@
+# slick 0.6.0
+
+* Retire deprecated getHelp
+* Add shiny render and output functions
+
 # slick 0.4.9
 
 * Add slick_div S3 method to build DOM elements to pass into slickR

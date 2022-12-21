@@ -8,6 +8,7 @@ knitr::opts_chunk$set(
 ## -----------------------------------------------------------------------------
 #  library(slickR)
 #  library(svglite)
+#  library(gdtools)
 #  library(shiny)
 
 ## -----------------------------------------------------------------------------
@@ -63,15 +64,21 @@ knitr::opts_chunk$set(
 #    output$slick_output <- renderSlickR({
 #  
 #      x <- slickR(plots(),
-#                  slideId = 'myslick',
+#                  slideId = 'slick1',
+#                  height = 600,
+#                  width = '50%') +
+#        settings(slidesToShow=3,centerMode=TRUE)
+#  
+#      y <- slickR(plots(),
+#                  slideId = 'slick2',
 #                  height = 600,
 #                  width = '50%') +
 #        settings(slidesToShow=3,centerMode=TRUE)
 #  
 #      switch(input$slick_type,
 #             'single' = x,
-#             'stack'  = x %stack% x,
-#             'synch'  = x %synch% x
+#             'stack'  = x %stack% y,
+#             'synch'  = x %synch% y
 #             )
 #  
 #    })
@@ -86,37 +93,28 @@ knitr::opts_chunk$set(
 #  # Using this you can interact server-side "on click" of the active carousel
 #  # by accessing elements in `input$slick_output_current$`
 #  
-#  # `.clicked_slide`   : The index of the clicked element|
+#  # `.clicked`   : The index of the clicked element|
 #  # `.relative_clicked`: The relative position of the clicked element|
-#  # `.center_slide`    : The index of the center element|
-#  # `.total_slide`     : The total number of elements in the carousel|
-#  # `.active_slide`    : The ID of the active carousel|
+#  # `.center`    : The index of the center element|
+#  # `.total`     : The total number of elements in the carousel|
+#  # `.active`    : The ID of the active carousel|
 #  
 #  # We will store this information in a new reactive environment
 #  active_slick <- shiny::reactiveValues()
 #  
 #  shiny::observeEvent(input$slick_output_current,{
-#  
-#    clicked_slide    <- input$slick_output_current$.clicked
-#    relative_clicked <- input$slick_output_current$.relative_clicked
-#    center_slide     <- input$slick_output_current$.center
-#    total_slide      <- input$slick_output_current$.total
-#    active_slide     <- input$slick_output_current$.slide
-#  
-#    if(!is.null(clicked_slide)){
-#      active_slick$clicked_slide    <- clicked_slide
-#      active_slick$center_slide     <- center_slide
-#      active_slick$relative_clicked <- relative_clicked
-#      active_slick$total_slide      <- total_slide
-#      active_slick$active_slide     <- active_slide
-#    }
+#      active_slick$clicked    <- input$slick_output_current$.clicked
+#      active_slick$relative_clicked <- input$slick_output_current$.relative_clicked
+#      active_slick$center     <- input$slick_output_current$.center
+#      active_slick$total      <- input$slick_output_current$.total
+#      active_slick$active     <- input$slick_output_current$.slide
 #  })
 #  
 #  # Show in the UI the values in active_slick
 #  
 #  output$current <- renderText({
-#    l <- shiny::reactiveValuesToList(active_slick)
-#    paste(gsub('_',' ',names(l)), unlist(l),sep=' = ',collapse='\n')
+#    l <- unlist(shiny::reactiveValuesToList(active_slick))
+#    paste(gsub('_',' ', names(l)), l, sep=' = ', collapse='\n')
 #  })
 #  
 #  }
